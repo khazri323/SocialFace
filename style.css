@@ -1,0 +1,429 @@
+/*Font : Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,700;1,300;1,400&family=Roboto:ital@0;1&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(4, 4, 28);
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color:  rgb(117, 1, 251);
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(36, 36, 146);
+    padding: 10px 0px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+
+.nav-left{
+    display: flex;
+    align-items: center;  
+}
+#logo{
+    width: 170px;
+    margin: 0 45px; 
+    cursor: pointer;
+    
+}
+
+#logo::first-letter{
+    color: blue;
+    font-size: 35px;
+}
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.nav-left ul li img{
+    width: 25px;
+    margin: 0 16px;
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content:'';
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff ;
+    border-radius: 50px;
+    background-color: green;
+    top: 0;
+    right:0;
+    position: absolute;
+
+}
+
+
+
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    margin: 0 70px;
+}
+.nav-right .nav-search-box{
+    display: flex;
+    align-items: center;
+    background-color:#efefefef;
+    padding: 5px 10px;
+    border-radius: 50px;
+    width: 300px;
+    margin-right: 20px;
+}
+.nav-right .nav-search-box input{
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+.nav-right .nav-user-icon img{
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+/*container*/
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 30px;
+}
+
+.left-sidebar {
+  background-color:#090942;
+  flex-basis: 25%;
+  height: 100vh;
+  padding-bottom:50px;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  border-radius: 20px;
+}
+
+.right-sidebar {
+    /* background-color: rgb(14, 14, 43); */
+    flex-basis: 25%;
+    height: 100vh;
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+}
+
+.left-sidebar .our-links a{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    width: fit-content;
+    color: #efefefef;
+}
+
+.left-sidebar .our-links a img{
+    width: 25px;
+    margin-right: 15px;
+}
+.left-sidebar .our-links a:last-child{
+    color:  rgb(117, 1, 251);
+    margin-bottom: 40px;
+}
+
+.left-sidebar .our-links {
+
+    border-bottom: 1px solid rgb(36, 36, 146);
+}
+
+.left-sidebar .shortcut-links a{
+    display: flex;
+    align-items: center;
+    color: #efefefef;
+    width: fit-content;
+    margin-left: 25px;
+    margin-top: 20px;
+
+}
+
+.left-sidebar .shortcut-links a img{
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.left-sidebar .shortcut-links p{
+    color: rgb(18, 18, 241);
+    margin-top: 30px;
+    margin-left: 25px;
+    font-size: 18px;
+    font-weight: 600px;
+}
+
+
+
+
+
+.right-sidebar .rtitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+.right-sidebar .rtitle a {
+    font-size: 12px;
+}
+.right-sidebar .events{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.right-sidebar .events .left-event{
+    margin-right: 20px;
+    margin-left:10px ;
+    width: 60px;
+    height: 60px;
+    background-color:rgb(36, 36, 146);
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.right-sidebar .events .left-event h3{
+    margin-top: 12px;
+}
+
+.right-sidebar .events .left-event span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    background-color:rgb(92, 92, 225);
+}
+
+.right-sidebar .events .right-event h4{
+    font-weight: bold;
+}
+
+.right-sidebar .events .right-event p , .right-sidebar .events .right-event a{
+    font-size: 12px;
+}
+
+.ads-sidebar{
+    width: 200px;
+    margin-left: 17px;
+    border-radius: 20px;
+    margin-left: 60px;
+}
+
+.right-sidebar .online-member{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.right-sidebar .online-member .online .member-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.right-sidebar .online-member .online::after{
+   top: unset;
+   right: unset;
+   bottom:4px;
+   left: 0;
+   
+}
+
+.right-sidebar .online-member p{
+    margin-left: 15px;
+}
+
+/*************************************************/
+.main-content{
+    padding: 0px 15px;
+  
+}
+
+.main-content .story-gallary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.main-content .story-gallary .story{
+    flex-basis: 20%;
+    padding: 90px 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;  
+    position: relative;
+    margin: 10px;
+}
+.main-content .story-gallary .story img{
+    position: absolute;
+    width: 30px;
+    border-radius: 50px;
+    top: 4px;
+    left: 4px;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.main-content .story-gallary .story p{
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    font-size: 14px;
+}
+
+.main-content .story-gallary .s1{
+    background-image:linear-gradient(transparent , rgba(0,0,0,0.5)) , url(images/2.jpg);
+}
+
+.main-content .story-gallary .s2{
+    background-image:linear-gradient(transparent , rgba(0,0,0,0.5)) , url(images/status-2.png);
+}
+
+.main-content .story-gallary .s3{
+    background-image:linear-gradient(transparent , rgba(0,0,0,0.5)) , url(images/status-3.png);
+}
+
+.main-content .story-gallary .s4{
+    background-image:linear-gradient(transparent , rgba(0,0,0,0.5)) , url(images/status-5.png);
+}
+
+.main-content .story-gallary .s5{
+    background-image:linear-gradient(transparent , rgba(0,0,0,0.5)) , url(images/str.jpeg);
+}
+
+
+.main-content .add-post {
+    width: 100%;
+    /* background-color: rgb(107, 107, 192);  */
+    background-color:  rgb(19, 19, 100);
+    padding: 15px;
+    border-radius: 15px;  
+    color: #efefefef;
+}
+
+ .user-account  {
+  display: flex;
+  align-items: center;
+}
+ .user-account img{
+    width: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.info-account p{
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 600px;
+}
+.user-account .info-account span{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.main-content .add-post .post , .main-content .add-post .post-links {
+    padding-left: 60px;
+    padding-top: 15px;
+}
+
+.main-content .add-post .post textarea{
+    width: 100%;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+    background-color: #efefefef;
+    resize: none;
+   
+}
+
+.main-content .add-post .post-links{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid rgb(36, 36, 146);
+}
+.main-content .add-post .post-links a{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    color: #efefefef;
+    font-size: 14px;
+}
+.main-content .add-post .post-links img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.main-content .show-post{
+    width: 100%;
+    background-color:  rgb(19, 19, 100);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    
+}
+.main-content .show-post p{
+    font-size: 15px;
+    margin: 10px 0;
+}
+.main-content .show-post .p-photo{
+    width: 600px;
+    border-radius: 10px;
+}
+
+
+.main-content .show-post .Like-comment-share .icons  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 50px;
+}
+
+.main-content .show-post .Like-comment-share .icons div img{
+    width: 20px;
+    margin-right: 8px;
+}
+.main-content .show-post .Like-comment-share .icons div {
+   display: inline-flex;
+   align-items: center;
+ font-size: 15px;
+}
+
+.main-content .show-post .pst-photo{
+    margin-left: 10px;
+    width: 280px;
+    border-radius: 10px;
+}
+
